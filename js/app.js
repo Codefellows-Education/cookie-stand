@@ -16,22 +16,6 @@ function Locations (name, min, max, averageCookieSale, totalCookies, randomCusto
   this.totalCookies = totalCookies;
   this.randomCustomerArray = randomCustomerArray;
   this.averageCookiesArray = averageCookiesArray;
-  // this.customersHour = function () {
-  //   for (var i = 0; i < timeArray.length; i++) {  
-  //     this.randomCustomerArray.push(numberCustomer(this.min, this.max));
-  //     }
-  //   };
-  // this.averageCookieSaleGenerator = function () { //generates the number of cookies sold each hour based on teh average cookie sales and the randomCustomerArray
-  //   for (var i=0; i < timeArray.length; i++) {
-  //     var mult = Math.floor(this.randomCustomerArray[i] * this.averageCookieSale);
-  //     this.averageCookiesArray.push(mult);
-  //   }
-  // };
-  // this.totalNumCookies = function() { //generates the total number of cookies
-  //   for (var i = 0; i < this.averageCookiesArray.length; i++) {
-  //     this.totalCookies += this.averageCookiesArray[i];
-  //   }
-  // };
   storesAll.push(this);
 };
 
@@ -71,19 +55,49 @@ for (var i = 0; i < storesAll.length; i++) {
   storesAll[i].render();
 }
 
-var newThead = document.createElement('thead');
 var newTr = document.createElement('tr');
 var newTh = document.createElement('th');
-var newTbody = document.createElement('tboday');
 var newTd = document.createElement('td');
-var newFoot = document.createElement('tfoot');
 
 var position = document.getElementsByTagName('thead')[0];
+var tbodyPosition = document.getElementsByTagName('tbody')[0];
 
-var newTextTotal = document.createTextNode('Total');
-newTr.appendChild(newTextTotal);
+//top row
 position.appendChild(newTr);
 
+var newTh = document.createElement('th');
+var blank = document.createTextNode('');
+newTh.appendChild(blank);
+position.appendChild(newTh);
+
+for (var j = 0; j < timeArray.length; j++) {
+var timeArrayText = document.createTextNode(timeArray[j]);
+newTh = document.createElement('th');
+newTh.appendChild(timeArrayText);
+position.appendChild(newTh);
+};
+
+//second row
+var names = function () {
+  var name = document.createTextNode(storesAll[l].name[k]);
+}
+var pikeFirst = function () {
+  for (var l = 0; l < storesAll.length; l++) {
+    var newTr = document.createElement('tr');
+    tbodyPosition.appendChild(newTr);
+    var name = document.createTextNode(storesAll[l].name);
+    newTr.appendChild(name);
+    for (var k = 0; k < storesAll[l].averageCookiesArray.length; k++) {
+      var pike = document.createElement('td');
+      var cookies = document.createTextNode(storesAll[l].averageCookiesArray[k]);
+      pike.appendChild(cookies);
+      //var position = document.getElementsByTagName('tr')[0];
+      newTr.appendChild(pike);
+      };
+
+  };
+};
+pikeFirst ();
 console.log(storesAll);
 
 
@@ -93,7 +107,7 @@ console.log(storesAll);
 //////////////////////////////old code///////////////////////////
 //first and Pike
 // var newLi;
-// var parentEl;
+// var parentEl;//
 // for (var i=0; i < timeArray.length; i++) {
 //   newLi = document.createElement('li');
 //   newLi.textContent = timeArray[i] + ': ' + firstPike.averageCookiesArray[i] + ' cookies ';
