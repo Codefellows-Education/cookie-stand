@@ -139,7 +139,7 @@ var capitolHill = {
     }
     //console.log(totalCookies);
   }
-}
+};
 
 //Alki
 var alki = {
@@ -170,7 +170,7 @@ var alki = {
     }
     //console.log(totalCookies);
   }
-}
+};
 
 //calling my functions
 
@@ -197,51 +197,52 @@ for (var i=0; i < timeArray.length; i++) {
   newLi.textContent = timeArray[i] + ': ' + firstPike.averageCookiesArray[i] + ' cookies ';
   var parentEl = document.getElementById('firstPike');
   parentEl.appendChild(newLi);
-};
+}
+
 var lastLi = document.createElement('li');
-  lastLi.textContent = 'Total: ' + firstPike.totalCookies + 'cookies';
-  parentEl.appendChild(lastLi);
+lastLi.textContent = 'Total: ' + firstPike.totalCookies + 'cookies';
+parentEl.appendChild(lastLi);
 
 //Sea Tac Airport
-for (var i=0; i < timeArray.length; i++) {
-  var newLi = document.createElement('li');
+for (i=0; i < timeArray.length; i++) {
+  newLi = document.createElement('li');
   newLi.textContent = timeArray[i] + ': ' + seaTacAirport.cookiesArray[i] + ' cookies ';
-  var parentEl = document.getElementById('seaTac');
+  parentEl = document.getElementById('seaTac');
   parentEl.appendChild(newLi);
-};
-var lastLi = document.createElement('li');
+}
+lastLi = document.createElement('li');
 lastLi.textContent = 'Total: ' + seaTacAirport.totalCookies + 'cookies';
 parentEl.appendChild(lastLi);
 
 //Seattle Center
-for (var i=0; i < timeArray.length; i++) {
-  var newLi = document.createElement('li');
+for (i=0; i < timeArray.length; i++) {
+  newLi = document.createElement('li');
   newLi.textContent = timeArray[i] + ': ' + seattleCenter.cookiesArray[i] + ' cookies ';
-  var parentEl = document.getElementById('seattleCenter');
+  parentEl = document.getElementById('seattleCenter');
   parentEl.appendChild(newLi);
-};
-var lastLi = document.createElement('li');
+}
+lastLi = document.createElement('li');
 lastLi.textContent = 'Total: ' + seattleCenter.totalCookies + 'cookies';
 parentEl.appendChild(lastLi);
 
 //Capitol Hill
-for (var i=0; i < timeArray.length; i++) {
-  var newLi = document.createElement('li');
+for (i=0; i < timeArray.length; i++) {
+  newLi = document.createElement('li');
   newLi.textContent = timeArray[i] + ': ' + capitolHill.cookiesArray[i] + ' cookies ';
-  var parentEl = document.getElementById('capitolHill');
+  parentEl = document.getElementById('capitolHill');
   parentEl.appendChild(newLi);
-};
-var lastLi = document.createElement('li');
+}
+lastLi = document.createElement('li');
 lastLi.textContent = 'Total: ' + capitolHill.totalCookies + 'cookies';
 parentEl.appendChild(lastLi);
 
 //Alki
-for (var i=0; i < timeArray.length; i++) {
-  var newLi = document.createElement('li');
+for (i=0; i < timeArray.length; i++) {
+  newLi = document.createElement('li');
   newLi.textContent = timeArray[i] + ': ' + alki.cookiesArray[i] + ' cookies ';
-  var parentEl = document.getElementById('alki');
+  parentEl = document.getElementById('alki');
   parentEl.appendChild(newLi);
-};
-var lastLi = document.createElement('li');
+}
+lastLi = document.createElement('li');
 lastLi.textContent = 'Total: ' + alki.totalCookies + 'cookies';
 parentEl.appendChild(lastLi);
