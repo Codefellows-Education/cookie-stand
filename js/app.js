@@ -7,6 +7,7 @@ function numberCustomer(min, max) { //generate a random inclusize number between
 //accessing the form DOM node
 var addLocationForm = document.getElementById('addLocation');
 var table = document.getElementById('table');
+var hourSum = [];
 
 //holds the instances of the objects entered in the constructor function
 var storesAll = [];
@@ -113,27 +114,29 @@ Locations.prototype.renderInnerTableData = function () {
 };
 
 //var firstSum = 0;
-//function footerRow () {
-var firstSum =0;
-for(var i = 0; i < storesAll.length; i++) {
-  console.log(firstSum, storesAll[i], storesAll[i].averageCookiesArray, storesAll[i] .averageCookiesArray[0]);
-  firstSum += storesAll[i].averageCookiesArray[0];
+function footerRow () {
+  for (var i = 0; i < timeArray.length; i++) {
+    var firstSum =0;
+    for(var j = 0; j < storesAll.length; j++) {
+      firstSum += storesAll[j].averageCookiesArray[i];
+    }
+    hourSum.push(firstSum);
+  }
+  console.log(hourSum);
 }
 //for(var j = 0; j < firstSum.length; j++) {
 //var firstTotalSum = firstTotalSum + firstSum[i];
 //console.log(firstTotalSum);
 //}
 //}
-//}
 //footerRow();
-console.log(firstSum);
 
 function callAllFunctions (){
-  //footerRow();
   for (var i = 0; i < storesAll.length; i++) {
     storesAll[i].render();
     storesAll[i].renderInnerTableData();
   }
+  footerRow();
 }
 
 function addNewLocation(event){
