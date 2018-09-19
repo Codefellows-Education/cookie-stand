@@ -89,7 +89,9 @@ var cookiesNumber = function () {
     var newTr = document.createElement('tr');
     tbodyPosition.appendChild(newTr);
     var name = document.createTextNode(storesAll[l].name);
-    newTr.appendChild(name);
+    var newTd = document.createElement('td');
+    newTr.appendChild(newTd);
+    newTd.appendChild(name);
     for (var k = 0; k < storesAll[l].averageCookiesArray.length; k++) {
       var cookiesYum = document.createElement('td');
       var cookies = document.createTextNode(storesAll[l].averageCookiesArray[k]);
@@ -98,7 +100,9 @@ var cookiesNumber = function () {
       };
     tbodyPosition.appendChild(newTr);
     var totalStore = document.createTextNode(storesAll[l].totalCookies);
-    newTr.appendChild(totalStore);
+    var newTdTwo = document.createElement('td');
+    newTr.appendChild(newTdTwo);
+    newTdTwo.appendChild(totalStore);
   };
 };
 
