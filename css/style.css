@@ -49,7 +49,7 @@ ul {
 li {
   padding-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color: 
+  color: #9fa9a0;
 }
 
 h2 {
@@ -61,6 +61,30 @@ h2 {
 
 p, h1, h2, h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table {
+  width: 80%;
+  margin:auto;
+  table-layout: auto;
+}
+
+thead {
+padding-top:100px;
+}
+
+th {
+  font-weight: bold;
+  font-size: 120%;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+td:first-child {
+  width: 20px;
 }
 
 footer {
