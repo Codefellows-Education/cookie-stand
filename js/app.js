@@ -62,6 +62,7 @@ new Locations ('Alki', 2, 16, 4.6);
 
 var position = document.getElementsByTagName('thead')[0];
 var tbodyPosition = document.getElementsByTagName('tbody')[0];
+//var tfootPosition = document.getElementsByTagName('tfoot')[0];
 
 //top row
 function headerRow (){
@@ -111,12 +112,24 @@ Locations.prototype.renderInnerTableData = function () {
   table.appendChild(tbodyPosition);
 };
 
-// function footerRow () {
-
-// };
+//var firstSum = 0;
+//function footerRow () {
+var firstSum =0;
+for(var i = 0; i < storesAll.length; i++) {
+  console.log(firstSum, storesAll[i], storesAll[i].averageCookiesArray, storesAll[i] .averageCookiesArray[0]);
+  firstSum += storesAll[i].averageCookiesArray[0];
+}
+//for(var j = 0; j < firstSum.length; j++) {
+//var firstTotalSum = firstTotalSum + firstSum[i];
+//console.log(firstTotalSum);
+//}
+//}
+//}
+//footerRow();
+console.log(firstSum);
 
 function callAllFunctions (){
-  // footerRow();
+  //footerRow();
   for (var i = 0; i < storesAll.length; i++) {
     storesAll[i].render();
     storesAll[i].renderInnerTableData();
@@ -135,10 +148,8 @@ function addNewLocation(event){
 
   // console.log(storesAll[storesAll.length-1]);
   tbodyPosition.innerHTML = '';
+  //tfootPosition.innerHTML = '';
   callAllFunctions();
-
-
-
 }
 
 addLocationForm.addEventListener('submit', addNewLocation);
