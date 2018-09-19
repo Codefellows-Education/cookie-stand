@@ -8,15 +8,19 @@ var storesAll = [];
 
 var timeArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
-function Locations (name, min, max, averageCookieSale, totalCookies, randomCustomerArray, averageCookiesArray) {
-  this.name = name;
-  this.min = min;
-  this.max = max;
-  this.averageCookieSale = averageCookieSale;
-  this.totalCookies = totalCookies;
-  this.randomCustomerArray = randomCustomerArray;
-  this.averageCookiesArray = averageCookiesArray;
+function Locations (name, min, max, averageCookieSale, totalCookies, randomCustomerArray, averageCookiesArray) 
+{
+  this.name                 = name;
+  this.min                  = min;
+  this.max                  = max;
+  this.averageCookieSale    = averageCookieSale;
+  this.totalCookies         = totalCookies;
+  this.randomCustomerArray  = randomCustomerArray;
+  this.averageCookiesArray  = averageCookiesArray;
+
   storesAll.push(this);
+  //*this* is an instance of Locations
+  // In the object and its methods, we call it "contextual this"
 };
 
 Locations.prototype.render = function() {
@@ -47,7 +51,7 @@ Locations.prototype.totalNumCookies = function() {
 
 new Locations ('1st and Pike', 23, 65, 6.3, 0, [], []);
 new Locations ('SeaTac Airport', 3, 24, 1.2, 0, [], []);
-new Locations ('Seattle Center', 11, 38, 63.7, 0, [], []);
+new Locations ('Seattle Center', 11, 38, 3.7, 0, [], []);
 new Locations ('Capitol Hill', 20, 38, 2.3, 0, [], []);
 new Locations ('Alki', 2, 16, 4.6, 0, [], []);
 
@@ -65,8 +69,6 @@ var tbodyPosition = document.getElementsByTagName('tbody')[0];
 function headerRow (){
   //blank cell
   var newTh = document.createElement('th');
-  var blank = document.createTextNode('');
-  newTh.appendChild(blank);
   position.appendChild(newTh);
 
   //times
