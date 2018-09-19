@@ -66,11 +66,11 @@ p, h1, h2, h3 {
 table {
   width: 80%;
   margin:auto;
-  table-layout: auto;
+  vertical-align: middle;
 }
 
 thead {
-padding-top:100px;
+  padding-top:100px;
 }
 
 th {
@@ -83,8 +83,8 @@ td {
   padding: 10px;
 }
 
-td:first-child {
-  width: 20px;
+td:hover {
+  background-color: #9fa9a0;
 }
 
 footer {
