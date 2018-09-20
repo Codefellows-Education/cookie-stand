@@ -19,7 +19,7 @@ function Locations (name, min, max, averageCookieSale)
   this.max = max;
   this.averageCookieSale = averageCookieSale;
   this.totalCookies = 0;
-  
+
   storesAll.push(this);
 }
 
@@ -172,6 +172,7 @@ function addNewLocation(event){
 }
 
 addLocationForm.addEventListener('submit', addNewLocation);
+
 headerRow();
 callAllFunctions();
 

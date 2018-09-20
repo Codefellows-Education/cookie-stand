@@ -117,7 +117,6 @@ tfoot tr:last-child {
 td:hover {
   background-color: #9fa9a0;
   border-radius: 40px;
-  font-size: 200%;
   font-weight: bold;
 }
 
@@ -158,4 +157,8 @@ button {
 footer {
   background-color: #bfb4ae;
   min-height: 100px;
+}
+
+.big {
+  font-size: 300%;
 }
