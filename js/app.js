@@ -4,9 +4,10 @@ function numberCustomer(min, max) { //generate a random inclusize number between
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
 
-//accessing the form DOM node
 var addLocationForm = document.getElementById('addLocation');
 var table = document.getElementById('table');
+
+//hold the total sales by hour
 var hourSum = [];
 
 //holds the instances of the objects entered in the constructor function
@@ -113,7 +114,7 @@ Locations.prototype.renderInnerTableData = function () {
   table.appendChild(tbodyPosition);
 };
 
-//var firstSum = 0;
+
 function footerRow () {
   for (var i = 0; i < timeArray.length; i++) {
     var firstSum =0;
@@ -122,14 +123,24 @@ function footerRow () {
     }
     hourSum.push(firstSum);
   }
-  console.log(hourSum);
+  //total hours
+  //putting in the tr
+  var getTfoot = document.getElementsByTagName('tfoot')[0];
+  var newTr = document.createElement('tr');
+  getTfoot.appendChild(newTr);
+
+  //blank cell
+  var newTd = document.createElement('td');
+  newTr.appendChild(newTd);
+
+  //totals by hour
+  for (var k = 0; k < hourSum.length; k++) {
+    var timeArrayText = document.createTextNode(hourSum[k]);
+    newTd = document.createElement('td');
+    newTd.appendChild(timeArrayText);
+    newTr.appendChild(newTd);
+  }
 }
-//for(var j = 0; j < firstSum.length; j++) {
-//var firstTotalSum = firstTotalSum + firstSum[i];
-//console.log(firstTotalSum);
-//}
-//}
-//footerRow();
 
 function callAllFunctions (){
   for (var i = 0; i < storesAll.length; i++) {
