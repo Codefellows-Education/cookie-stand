@@ -63,16 +63,24 @@ p, h1, h2, h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+main section {
+  padding:50px 0;
+}
+
+.second {
+  padding-top: 0;
+}
+
+main img {
+  width: 100%;
+}
+
 table {
   width: 80%;
   margin:auto;
   vertical-align: middle;
   padding-bottom: 20px;
   overflow: scroll;
-}
-
-thead {
-  padding-top:100px;
 }
 
 th {
@@ -84,6 +92,7 @@ th {
 td {
   padding: 10px;
   background-color: #ffd;
+  opacity: .8;
   border-radius: 40px; 
   text-align: center;
   padding-bottom: 20px;
@@ -98,8 +107,12 @@ font-size: 150%;
 tr > td:first-of-type {
   font-weight:bold;
   font-size: 120%;
-  width: 50px;
   }
+
+tfoot tr:last-child {
+  font-weight: bold;
+  font-size: 120%;
+}
 
 td:hover {
   background-color: #9fa9a0;
@@ -115,7 +128,7 @@ form {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  background-color: #999;
+  background-color: #bfb4ae;
   border-radius: 20px;
 }
 
