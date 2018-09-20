@@ -14,14 +14,12 @@ var timeArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm
 //constructor funciton
 function Locations (name, min, max, averageCookieSale) 
 {
-  this.name                 = name;
-  this.min                  = min;
-  this.max                  = max;
-  this.averageCookieSale    = averageCookieSale;
-  this.totalCookies         = 0;
-  this.randomCustomerArray  = [];
-  this.averageCookiesArray  = [];
-
+  this.name = name;
+  this.min = min;
+  this.max = max;
+  this.averageCookieSale = averageCookieSale;
+  this.totalCookies = 0;
+  
   storesAll.push(this);
 }
 
@@ -117,7 +115,7 @@ Locations.prototype.renderInnerTableData = function () {
   table.appendChild(tbodyPosition);
 };
 
-
+//footer row
 function footerRow () {
   hourSum = [];
   for (var i = 0; i < timeArray.length; i++) {
@@ -144,6 +142,9 @@ function footerRow () {
     newTd.appendChild(timeArrayText);
     newTr.appendChild(newTd);
   }
+  //final blank cell
+  newTd = document.createElement('td');
+  newTr.appendChild(newTd);
 }
 
 function callAllFunctions (){

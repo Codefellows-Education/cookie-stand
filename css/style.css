@@ -87,17 +87,25 @@ td {
   border-radius: 40px; 
   text-align: center;
   padding-bottom: 20px;
+  vertical-align: middle;
 }
 
 tr > td:last-of-type {
 font-weight:bold;
 font-size: 150%;
-vertical-align: middle;
 }
+
+tr > td:first-of-type {
+  font-weight:bold;
+  font-size: 120%;
+  width: 50px;
+  }
 
 td:hover {
   background-color: #9fa9a0;
   border-radius: 40px;
+  font-size: 200%;
+  font-weight: bold;
 }
 
 form {
