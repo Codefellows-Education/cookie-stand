@@ -1,9 +1,5 @@
 'use strict';
 
-function numberCustomer(min, max) { //generate a random inclusize number between min and max
-  return Math.floor(Math.random() * (max - min + 1) + min); 
-}
-
 var addLocationForm = document.getElementById('addLocation');
 var table = document.getElementById('table');
 
@@ -30,8 +26,14 @@ function Locations (name, min, max, averageCookieSale)
 }
 
 //prototypes
+
 Locations.prototype.customersHour = function() {
   this.randomCustomerArray = [];
+  
+  function numberCustomer(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
   for (var i = 0; i < timeArray.length; i++) {  
     this.randomCustomerArray.push(numberCustomer(this.min, this.max));
   }
@@ -65,13 +67,10 @@ new Locations ('Seattle Center', 11, 38, 3.7);
 new Locations ('Capitol Hill', 20, 38, 2.3);
 new Locations ('Alki', 2, 16, 4.6);
 
-var position = document.getElementsByTagName('thead')[0];
-var tbodyPosition = document.getElementsByTagName('tbody')[0];
-//var tfootPosition = document.getElementsByTagName('tfoot')[0];
-
 //top row
 function headerRow (){
   //blank cell
+  var position = document.getElementsByTagName('thead')[0];
   var newTh = document.createElement('th');
   position.appendChild(newTh);
   table.appendChild(position);
@@ -95,6 +94,7 @@ function headerRow (){
 Locations.prototype.renderInnerTableData = function () {
 
   var newTr = document.createElement('tr');
+  var tbodyPosition = document.getElementsByTagName('tbody')[0];
   tbodyPosition.appendChild(newTr);
 
   var newTd = document.createElement('td');
@@ -164,10 +164,9 @@ function addNewLocation(event){
 
   new Locations (newName, Number(newMin), Number(newMax), newAverageCookieSale);
 
-  // console.log(storesAll[storesAll.length-1]);
+  var tbodyPosition = document.getElementsByTagName('tbody')[0];
   tbodyPosition.innerHTML = '';
   document.getElementsByTagName('tfoot')[0].innerHTML = '';
-  //tfootPosition.innerHTML = '';
   callAllFunctions();
 }
 
