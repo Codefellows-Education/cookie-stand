@@ -118,10 +118,12 @@ Locations.prototype.renderInnerTableData = function () {
 //footer row
 function footerRow () {
   hourSum = [];
+  var grandTotal = 0;
   for (var i = 0; i < timeArray.length; i++) {
     var firstSum =0;
     for(var j = 0; j < storesAll.length; j++) {
       firstSum += storesAll[j].averageCookiesArray[i];
+      grandTotal += storesAll[j].averageCookiesArray[i];
     }
     hourSum.push(firstSum);
   }
@@ -144,7 +146,9 @@ function footerRow () {
   }
   //final blank cell
   newTd = document.createElement('td');
+  var getGrandTotal = document.createTextNode(grandTotal);
   newTr.appendChild(newTd);
+  newTd.appendChild(getGrandTotal);
 }
 
 function callAllFunctions (){
@@ -175,4 +179,7 @@ addLocationForm.addEventListener('submit', addNewLocation);
 
 headerRow();
 callAllFunctions();
+
+
+//var ul = addElement('ul', '', main); // adds ul with an empty string to main tag
 
