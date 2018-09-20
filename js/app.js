@@ -31,12 +31,14 @@ function Locations (name, min, max, averageCookieSale)
 
 //prototypes
 Locations.prototype.customersHour = function() {
+  this.randomCustomerArray = [];
   for (var i = 0; i < timeArray.length; i++) {  
     this.randomCustomerArray.push(numberCustomer(this.min, this.max));
   }
 };
 
 Locations.prototype.averageCookieSaleGenerator = function() {
+  this.averageCookiesArray = [];
   for (var i=0; i < timeArray.length; i++) {
     var mult = Math.floor(this.randomCustomerArray[i] * this.averageCookieSale);
     this.averageCookiesArray.push(mult);
@@ -44,6 +46,7 @@ Locations.prototype.averageCookieSaleGenerator = function() {
 };
 
 Locations.prototype.totalNumCookies = function() {
+  this.totalCookies = 0;
   for (var i = 0; i < this.averageCookiesArray.length; i++) {
     this.totalCookies += this.averageCookiesArray[i];
   }
@@ -116,6 +119,7 @@ Locations.prototype.renderInnerTableData = function () {
 
 
 function footerRow () {
+  hourSum = [];
   for (var i = 0; i < timeArray.length; i++) {
     var firstSum =0;
     for(var j = 0; j < storesAll.length; j++) {
@@ -158,10 +162,11 @@ function addNewLocation(event){
   var newMax = event.target.max.value;
   var newAverageCookieSale = parseFloat(event.target.averageCookieSale.value);
 
-  new Locations (newName, newMin, newMax, newAverageCookieSale);
+  new Locations (newName, Number(newMin), Number(newMax), newAverageCookieSale);
 
   // console.log(storesAll[storesAll.length-1]);
   tbodyPosition.innerHTML = '';
+  document.getElementsByTagName('tfoot')[0].innerHTML = '';
   //tfootPosition.innerHTML = '';
   callAllFunctions();
 }

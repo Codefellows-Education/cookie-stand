@@ -16,6 +16,27 @@
         </nav>     
       </header>
     <main>
+      <section>
+        <form id="addLocation">
+          <fieldset>
+            <legend>Add a Location</legend>
+
+            <label for='name'>Location Name</label>
+            <input type='text' name='name' required>
+
+            <label for='min'>Minimum Cookies Sold Each Hour</label>
+            <input type='number' name='min' required>
+
+            <label for='max'>Maximum Cookies Sold Each Hour</label>
+            <input type='number' name='max' required>
+
+            <label for='averageCookieSale'>Average Cookies Sold Per Person</label>
+            <input type='text' name='averageCookieSale' required>
+
+            <button>Submit</button>
+          </fieldset>
+        </form>
+    </section>
     <section>
       <table id="table">
         <thead>
@@ -28,27 +49,6 @@
 
         </tfoot>
       </table>
-    </section>
-    <section>
-      <form id="addLocation">
-        <fieldset>
-          <legend>Add a Location</legend>
-
-          <label for='name'>Location Name</label>
-          <input type='text' name='name' required>
-
-          <label for='min'>Minimum Cookies Sold Each Hour</label>
-          <input type='number' name='min' required>
-
-          <label for='max'>Maximum Cookies Sold Each Hour</label>
-          <input type='number' name='max' required>
-
-          <label for='averageCookieSale'>Average Cookies Sold Per Person</label>
-          <input type='text' name='averageCookieSale' required>
-
-          <button>Submit</button>
-        </fieldset>
-      </form>
     </section>
   </main>
   <footer>
