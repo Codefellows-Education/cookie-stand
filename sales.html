@@ -4,6 +4,7 @@
   <title>Pat's Salmon Cookies</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,33 +13,48 @@
           <ul>
               <li><a href="index.html">home</a></li>
               <li><a href="sales.html">sales</a></li>
+              <li><a href="pat.html">meet pat</a></li>
           </ul>
         </nav>     
       </header>
     <main>
-    <section>
-      <ul id="firstPike"><h2>First and Pike</h2>
+      <section>
+        <form id="addLocation">
+          <fieldset>
+            <legend>Add a Location</legend>
 
-      </ul>
+            <label for='name'>Location Name</label>
+            <input type='text' name='name' required>
 
-      <ul id="seaTac"><h2>Sea Tac Airport</h2>
+            <label for='min'>Minimum Cookies Sold Each Hour</label>
+            <input type='number' name='min' required>
 
-      </ul>
+            <label for='max'>Maximum Cookies Sold Each Hour</label>
+            <input type='number' name='max' required>
 
-      <ul id="seattleCenter"><h2>Seattle Center</h2>
+            <label for='averageCookieSale'>Average Cookies Sold Per Person</label>
+            <input type='text' name='averageCookieSale' required>
 
-      </ul>
+            <button>Submit</button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="second">
+        <table id="table">
+          <thead>
+          
+          </thead>
+          <tbody>
 
-      <ul id="capitolHill"><h2>Capitol Hill</h2>
+          </tbody>
+          <tfoot>
 
-      </ul>
-
-      <ul id="alki"><h2>Alki</h2>
-
-      </ul>
-    </section>
+          </tfoot>
+        </table>
+      </section>
   </main>
   <footer>
+      <p>Thanks for visiting!</p>
       <script src="js/app.js"></script>
   </footer>
 </body>

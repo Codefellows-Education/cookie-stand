@@ -4,11 +4,12 @@ body {
   color:#333;
   margin:auto;
   border:2px solid #555;
+  font-family: 'Noto Serif JP', sans-serif;
 }
 
 header {
-background-color: #9fa9a0;
-min-height: 200px;
+  background-color: #9fa9a0;
+  min-height: 200px;
 }
 
 header img {
@@ -49,7 +50,7 @@ ul {
 li {
   padding-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  color: 
+  color: #9fa9a0;
 }
 
 h2 {
@@ -57,13 +58,181 @@ h2 {
   font-weight: bold;
   padding: 20px;
   text-align: center;
+  font-family:"Noto"
 }
 
-p, h1, h2, h3 {
+h1, h2, h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main section {
+  padding:50px 0;
+}
+
+.second {
+  padding-top: 0;
+}
+
+main img {
+  width: 100%;
+}
+
+main h1{
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+iframe {
+  position: absolute;
+  top: 260px;
+  left: 93px;
+  box-shadow: 5px 10px;
 }
 
 footer {
   background-color: #bfb4ae;
   min-height: 100px;
 }
+
+footer p {
+  text-align: center;
+  line-height:100px;
+}
+
+.big {
+  font-size: 300%;
+}
+
+.about-pat-sections{
+  padding: 20px;
+  overflow: hidden;
+}
+
+.about-pat-sections p {
+  padding-bottom: 10px;
+
+}
+
+.about-pat-sections img{
+  width: 30%;
+  border: 2px groove #555;
+  float: left;
+  margin-right: 20px;
+}
+
+main #hours {
+  text-align: center;
+}
+
+main #hours ul {
+  padding: 0;
+  margin: 0;
+}
+
+main #hours ul li {
+  color: #333;
+}
+
+#image-line p {
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#contact {
+  width: 60%;
+  line-height: 27px;
+  position: absolute;
+  top: 262px;
+  left: 362px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+/* Table Styles */
+
+table {
+  width: 80%;
+  margin:auto;
+  vertical-align: middle;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+
+th {
+  font-weight: bold;
+  font-size: 120%;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  background-color: #ffd;
+  opacity: .8;
+  border-radius: 40px; 
+  text-align: center;
+  padding-bottom: 20px;
+  vertical-align: middle;
+}
+
+tr > td:last-of-type {
+font-weight:bold;
+font-size: 150%;
+}
+
+tr > td:first-of-type {
+  font-weight:bold;
+  font-size: 120%;
+  }
+
+tfoot tr:last-child {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+td:hover {
+  background-color: #9fa9a0;
+  border-radius: 40px;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+/* Form Styling */
+
+form {
+  border: 2px solid #333;
+  width: 60%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: #bfb4ae;
+  border-radius: 20px;
+}
+
+legend {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+input {
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+label {
+  padding:10px;
+  display: block;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
